@@ -1,5 +1,5 @@
-const {Component} = require('react')
-const ReactDOM = require('react-dom')
+const {Component, createElement} = require('react')
+const {render} = require('react-dom')
 
 interface IProps {
   person?: string;
@@ -11,4 +11,7 @@ class MyComponent extends Component<IProps, {}> {
   }
 }
 
-ReactDOM.render(<MyComponent person="Chris" />, document.getElementById('app'))
+render(
+  createElement(MyComponent, {person: 'Chris'}),
+  document.getElementById('app')
+)

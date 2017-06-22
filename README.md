@@ -1,7 +1,7 @@
 Simple TypeScript React
 =======================
 
-A simple scrict checked React + Typescript project.
+A simple strict checked React + Typescript project.
 
 
 Getting started
@@ -15,4 +15,4 @@ Getting started
 TODO
 ----
 
-  * Make TypeScript happy
+  * Work out how to use JSX with `ReactDOM.render`
