@@ -1,8 +1,8 @@
 import * as React from 'react'
-import {connect, Dispatch} from 'react-redux'
+import { connect, Dispatch } from 'react-redux'
 
-import {StoreState} from './types'
-import {CountAction, incrementCount, decrementCount} from './actions'
+import { StoreState } from './types'
+import { CountAction, incrementCount, decrementCount } from './actions'
 
 interface OwnProps {
   person?: string
@@ -20,7 +20,7 @@ interface DispatchProps {
 type GreeterProps = OwnProps & StateProps & DispatchProps
 
 class Greeter extends React.Component<GreeterProps, {}> {
-  render() {
+  render () {
     return <div>
       <h1>Hello {this.props.person || 'world'}!</h1>
       <button onClick={this.props.onIncrement}>Increment</button>
@@ -29,13 +29,13 @@ class Greeter extends React.Component<GreeterProps, {}> {
   }
 }
 
-function mapStateToProps({count}: StoreState) {
+function mapStateToProps ({count}: StoreState) {
   return {
     person: `beep boop ${count}`
   }
 }
 
-function mapDispatchToProps(dispatch: Dispatch<CountAction>) {
+function mapDispatchToProps (dispatch: Dispatch<CountAction>) {
   return {
     onIncrement: () => dispatch(incrementCount()),
     onDecrement: () => dispatch(decrementCount())

@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "build": "browserify . -p [ tsify ] -o public/bundle.js -v",
-    "watch": "watchify . -p [ tsify ] -o public/bundle.js -v"
+    "watch": "watchify . -p [ tsify ] -o public/bundle.js -v",
+    "test": "tslint -p ."
   },
   "dependencies": {
     "@types/node": "8.0.1",
@@ -18,5 +19,9 @@
     "tsify": "3.0.1",
     "typescript": "2.3.4",
     "watchify": "3.9.0"
+  },
+  "devDependencies": {
+    "tslint": "5.4.3",
+    "tslint-config-standard": "6.0.1"
   }
 }
