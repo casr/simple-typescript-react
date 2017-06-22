@@ -1,17 +1,8 @@
-const {Component, createElement} = require('react')
-const {render} = require('react-dom')
-
-interface IProps {
-  person?: string;
-}
-
-class MyComponent extends Component<IProps, {}> {
-  render() {
-    return <h1>Hello {this.props.person || 'world'}!</h1>
-  }
-}
+import * as React from 'react'
+import {render} from 'react-dom'
+import Greeter from './greeter'
 
 render(
-  createElement(MyComponent, {person: 'Chris'}),
+  <Greeter person="Chris" />,
   document.getElementById('app')
 )

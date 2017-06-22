@@ -15,4 +15,4 @@ Getting started
 TODO
 ----
 
-  * Work out how to use JSX with `ReactDOM.render`
+  * Connect to a Redux store
