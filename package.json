@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "browserify . -p [ tsify ] -o public/bundle.js -v",
+    "watch": "watchify . -p [ tsify ] -o public/bundle.js -v"
+  },
+  "dependencies": {
+    "@types/node": "8.0.1",
+    "@types/react": "15.0.30",
+    "browserify": "14.4.0",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "tsify": "^3.0.1",
+    "typescript": "2.3.4",
+    "watchify": "^3.9.0"
+  }
+}
