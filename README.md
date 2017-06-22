@@ -10,9 +10,3 @@ Getting started
     npm install
     npm run watch
     http-server public -p 3000
-
-
-TODO
-----
-
-  * Connect to a Redux store
