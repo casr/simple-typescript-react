@@ -1,10 +1,11 @@
 import * as React from 'react'
 import { connect, Dispatch } from 'react-redux'
+import { RouteComponentProps } from 'react-router-dom'
 
 import { StoreState } from './types'
 import { CountAction, incrementCount, decrementCount } from './actions'
 
-interface OwnProps {
+interface OwnProps extends RouteComponentProps<{}> {
   person?: string
 }
 
