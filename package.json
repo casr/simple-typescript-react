@@ -25,5 +25,9 @@
   "devDependencies": {
     "tslint": "5.4.3",
     "tslint-config-standard": "6.0.1"
+  },
+  "engines": {
+    "node": "6",
+    "npm": "5"
   }
 }
