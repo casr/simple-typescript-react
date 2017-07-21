@@ -1,29 +1,29 @@
 {
   "private": true,
   "scripts": {
-    "build": "browserify . -p [ tsify ] -o public/bundle.js",
-    "watch": "watchify . -p [ tsify ] -o public/bundle.js -v",
+    "build": "browserify . -p tsify -o public/bundle.js",
+    "watch": "watchify . -p tsify -o public/bundle.js -v",
     "test": "tslint -p ."
   },
   "dependencies": {
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-redux": "5.0.5",
-    "react-router-dom": "4.1.1",
-    "redux": "3.7.1"
+    "react-router-dom": "4.1.2",
+    "redux": "3.7.2"
   },
   "devDependencies": {
-    "@types/node": "6.0.79",
-    "@types/react": "15.0.35",
+    "@types/node": "6.0.84",
+    "@types/react": "15.0.38",
     "@types/react-dom": "15.5.1",
-    "@types/react-redux": "4.4.45",
-    "@types/react-router-dom": "4.0.6",
+    "@types/react-redux": "4.4.46",
+    "@types/react-router-dom": "4.0.7",
     "@types/redux": "3.6.0",
     "browserify": "14.4.0",
     "tsify": "3.0.1",
     "tslint": "5.5.0",
     "tslint-config-standard": "6.0.1",
-    "typescript": "2.4.1",
+    "typescript": "2.4.2",
     "watchify": "3.9.0"
   },
   "engines": {
