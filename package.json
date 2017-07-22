@@ -3,7 +3,7 @@
   "scripts": {
     "build": "browserify . -p tsify -o public/bundle.js",
     "watch": "watchify . -p tsify -o public/bundle.js -dv",
-    "test": "tslint -p ."
+    "test": "tslint -p . && tsc -p . --noEmit"
   },
   "dependencies": {
     "react": "15.6.1",
