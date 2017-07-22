@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "browserify . -p tsify -o public/bundle.js",
-    "watch": "watchify . -p tsify -o public/bundle.js -v",
+    "watch": "watchify . -p tsify -o public/bundle.js -dv",
     "test": "tslint -p ."
   },
   "dependencies": {
