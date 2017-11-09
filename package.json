@@ -6,16 +6,16 @@
     "test": "tslint -p . && tsc -p . --noEmit"
   },
   "dependencies": {
-    "react": "15.6.1",
-    "react-dom": "15.6.1",
+    "react": "16.1.0",
+    "react-dom": "16.1.0",
     "react-redux": "5.0.5",
     "react-router-dom": "4.1.2",
     "redux": "3.7.2"
   },
   "devDependencies": {
     "@types/node": "6.0.84",
-    "@types/react": "15.0.38",
-    "@types/react-dom": "15.5.1",
+    "@types/react": "16.0.22",
+    "@types/react-dom": "16.0.3",
     "@types/react-redux": "4.4.46",
     "@types/react-router-dom": "4.0.7",
     "@types/redux": "3.6.0",
