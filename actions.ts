@@ -3,24 +3,24 @@ export type INCREMENT_COUNT = typeof INCREMENT_COUNT
 export const DECREMENT_COUNT: string = 'DECREMENT_COUNT'
 export type DECREMENT_COUNT = typeof DECREMENT_COUNT
 
-export interface IncrementCount {
+export interface IIncrementCount {
   type: INCREMENT_COUNT
 }
 
-export interface DecrementCount {
+export interface IDecrementCount {
   type: DECREMENT_COUNT
 }
 
-export function incrementCount (): IncrementCount {
+export function incrementCount (): IIncrementCount {
   return {
     type: INCREMENT_COUNT
   }
 }
 
-export function decrementCount (): DecrementCount {
+export function decrementCount (): IDecrementCount {
   return {
     type: DECREMENT_COUNT
   }
 }
 
-export type CountAction = IncrementCount | DecrementCount
+export type CountAction = IIncrementCount | IDecrementCount

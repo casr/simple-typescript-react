@@ -2,23 +2,23 @@ import * as React from 'react'
 import { connect, Dispatch } from 'react-redux'
 import { RouteComponentProps } from 'react-router-dom'
 
-import { StoreState } from './types'
-import { CountAction, incrementCount, decrementCount } from './actions'
+import { CountAction, decrementCount, incrementCount } from './actions'
+import { IStoreState } from './types'
 
-interface OwnProps extends RouteComponentProps<{}> {
+interface IOwnProps extends RouteComponentProps<{}> {
   person?: string
 }
 
-interface StateProps {
+interface IStateProps {
   person: string
 }
 
-interface DispatchProps {
+interface IDispatchProps {
   onIncrement: () => void
   onDecrement: () => void
 }
 
-type GreeterProps = OwnProps & StateProps & DispatchProps
+type GreeterProps = IOwnProps & IStateProps & IDispatchProps
 
 class Greeter extends React.Component<GreeterProps, {}> {
   render () {
@@ -30,7 +30,7 @@ class Greeter extends React.Component<GreeterProps, {}> {
   }
 }
 
-function mapStateToProps ({count}: StoreState) {
+function mapStateToProps ({count}: IStoreState) {
   return {
     person: `beep boop ${count}`
   }
@@ -38,9 +38,9 @@ function mapStateToProps ({count}: StoreState) {
 
 function mapDispatchToProps (dispatch: Dispatch<CountAction>) {
   return {
-    onIncrement: () => dispatch(incrementCount()),
-    onDecrement: () => dispatch(decrementCount())
+    onDecrement: () => dispatch(decrementCount()),
+    onIncrement: () => dispatch(incrementCount())
   }
 }
 
-export default connect<StateProps, DispatchProps, OwnProps>(mapStateToProps, mapDispatchToProps)(Greeter)
+export default connect<IStateProps, IDispatchProps, IOwnProps>(mapStateToProps, mapDispatchToProps)(Greeter)

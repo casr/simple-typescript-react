@@ -1,3 +1,40 @@
 {
-  "extends": "tslint-config-standard"
+  "extends": ["tslint:recommended", "tslint-react"],
+  "rules": {
+    "curly": [true, "ignore-same-line"],
+    "indent": [true, "spaces", 2],
+    "jsx-boolean-value": false,
+    "jsx-wrap-multiline": false,
+    "member-access": [true, "no-public"],
+    "no-console": false,
+    "no-irregular-whitespace": true,
+    "no-switch-case-fall-through": true,
+    "no-unused-variable": true,
+    "semicolon": [true, "never"],
+    "space-before-function-paren": [true, "always"],
+    "quotemark": [true, "single", "avoid-escape"],
+    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}]
+  },
+  "jsRules": {
+    "comment-format": [true, "check-space"],
+    "curly": [true, "ignore-same-line"],
+    "indent": [true, "spaces", 2],
+    "jsx-alignment": true,
+    "jsx-boolean-value": false,
+    "jsx-equals-spacing": [true, "never"],
+    "jsx-key": true,
+    "jsx-no-bind": true,
+    "jsx-no-lambda": true,
+    "jsx-no-multiline-js": true,
+    "jsx-no-string-ref": true,
+    "jsx-self-close": true,
+    "jsx-wrap-multiline": false,
+    "no-console": false,
+    "no-irregular-whitespace": true,
+    "no-switch-case-fall-through": true,
+    "quotemark": [true, "single", "avoid-escape"],
+    "semicolon": [true, "never"],
+    "space-before-function-paren": [true, "always"],
+    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}]
+  }
 }
