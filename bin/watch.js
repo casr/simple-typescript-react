@@ -8,15 +8,14 @@ const watchify = require('watchify')
 const inFile = path.join(__dirname, '../src')
 const outFile = path.join(__dirname, '../public/bundle.js')
 
-const b = browserify({
-  ...watchify.args,
+const b = browserify(Object.assign({}, watchify.args, {
   debug: true,
   entries: [inFile],
   plugin: [
     watchify,
     tsify
   ]
-})
+}))
 
 if (process.env.ERRORS === 'browser') {
   const errorify = require('errorify')
@@ -25,7 +24,7 @@ if (process.env.ERRORS === 'browser') {
 
 function bundle () {
   b.bundle()
-    .on('error', (error) => { console.error(error.toString()) })
+    .on('error', error => { console.error(error.toString()) })
     .pipe(fs.createWriteStream(outFile))
 }
 
