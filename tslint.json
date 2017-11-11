@@ -1,8 +1,10 @@
 {
   "extends": ["tslint:recommended", "tslint-react"],
   "rules": {
+    "arrow-parens": false,
     "curly": [true, "ignore-same-line"],
     "indent": [true, "spaces", 2],
+    "interface-name": false,
     "jsx-boolean-value": false,
     "jsx-wrap-multiline": false,
     "member-access": [true, "no-public"],
@@ -16,6 +18,7 @@
     "trailing-comma": [true, {"multiline": "never", "singleline": "never"}]
   },
   "jsRules": {
+    "arrow-parens": false,
     "comment-format": [true, "check-space"],
     "curly": [true, "ignore-same-line"],
     "indent": [true, "spaces", 2],
