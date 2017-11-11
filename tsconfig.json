@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "jsx": "react",
     "lib": [
       "DOM",
@@ -12,5 +13,8 @@
   },
   "files": [
     "./src/index.tsx"
+  ],
+  "include": [
+    "./bin"
   ]
 }
