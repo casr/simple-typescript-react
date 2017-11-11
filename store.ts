@@ -1,7 +1,17 @@
-import { createStore } from 'redux'
-import { numberReducer } from './reducers'
-import { IStoreState } from './types'
+import { applyMiddleware, createStore } from 'redux'
+import thunk from 'redux-thunk'
 
-const store = createStore<IStoreState>(numberReducer, {count: 0})
+import {
+  default as numberReducer,
+  Store
+} from './ducks'
+
+const store = createStore<Store>(
+  numberReducer,
+  {amount: 0},
+  applyMiddleware(
+    thunk
+  )
+)
 
 export default store
