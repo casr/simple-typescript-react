@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "browserify . -p tsify -o public/bundle.js",
+    "build": "browserify ./src -p tsify -o public/bundle.js",
     "watch": "./bin/watch.js",
     "watch:strict": "ERRORS=browser ./bin/watch.js",
     "test": "tslint -p . && tsc -p . --noEmit"

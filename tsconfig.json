@@ -8,5 +8,8 @@
       "ScriptHost"
     ],
     "strict": true
-  }
+  },
+  "files": [
+    "./src/index.tsx"
+  ]
 }

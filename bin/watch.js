@@ -5,7 +5,7 @@ const browserify = require('browserify')
 const tsify = require('tsify')
 const watchify = require('watchify')
 
-const inFile = path.join(__dirname, '..')
+const inFile = path.join(__dirname, '../src')
 const outFile = path.join(__dirname, '../public/bundle.js')
 
 const b = browserify({
