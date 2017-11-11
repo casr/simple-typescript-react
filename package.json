@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "build": "browserify . -p tsify -o public/bundle.js",
-    "watch": "watchify . -p tsify -o public/bundle.js -dv",
+    "watch": "./bin/watch.js",
+    "watch:strict": "ERRORS=browser ./bin/watch.js",
     "test": "tslint -p . && tsc -p . --noEmit"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "@types/react-router-dom": "4.2.1",
     "@types/redux": "3.6.0",
     "browserify": "14.5.0",
+    "errorify": "0.3.1",
     "tsify": "3.0.3",
     "tslint": "5.8.0",
     "tslint-react": "3.2.0",
